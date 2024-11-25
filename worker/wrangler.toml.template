@@ -3,21 +3,21 @@ main = "src/worker.ts"
 compatibility_date = "2024-09-23"
 compatibility_flags = [ "nodejs_compat" ]
 # if you want use custom_domain, you need to add routes
-# routes = [
-# 	{ pattern = "temp-email-api.xxxxx.xyz", custom_domain = true },
-# ]
+routes = [
+	{ pattern = "temp-email-api.xxxxx.xyz", custom_domain = true },
+]
 
 # enable cron if you want set auto clean up
-# [triggers]
-# crons = [ "0 0 * * *" ]
+[triggers]
+crons = [ "0 0 * * *" ]
 
-# send_email = [
-#    { name = "SEND_MAIL" },
-# ]
+send_email = [
+   { name = "SEND_MAIL" },
+]
 
 [vars]
-# TITLE = "Custom Title" # custom title
-# ANNOUNCEMENT = "Custom Announcement"
+TITLE = "Custom Title" # custom title
+ANNOUNCEMENT = "Custom Announcement"
 PREFIX = "tmp"
 # address check REGEX, if not set, will not check
 # ADDRESS_CHECK_REGEX = "^(?!.*admin).*"
@@ -27,15 +27,15 @@ PREFIX = "tmp"
 # MIN_ADDRESS_LEN = 1
 # MAX_ADDRESS_LEN = 30
 # IF YOU WANT TO MAKE YOUR SITE PRIVATE, UNCOMMENT THE FOLLOWING LINES
-# PASSWORDS = ["123", "456"]
+PASSWORDS = ["ergou", "ren123005."]
 # For admin panel
-# ADMIN_PASSWORDS = ["123", "456"]
+ADMIN_PASSWORDS = ["ergou", "ren123005."]
 # warning: no password or user check for admin portal
 # DISABLE_ADMIN_PASSWORD_CHECK = false
 # ADMIN CONTACT, CAN BE ANY STRING
 # ADMIN_CONTACT = "xx@xx.xxx"
-DEFAULT_DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # domain name for no role users
-DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # all domain names
+# DEFAULT_DOMAINS = ["xxx.xxx1" , "xxx.xxx2"] # domain name for no role users
+DOMAINS = ["email.sobugs.com"] # all domain names
 # For chinese domain name, you can use DOMAIN_LABELS to show chinese domain name
 # DOMAIN_LABELS = ["中文.xxx", "xxx.xxx2"]
 # USER_DEFAULT_ROLE = "vip" # default role for new users(only when enable mail verification)
@@ -75,8 +75,8 @@ ENABLE_AUTO_REPLY = false
 
 [[d1_databases]]
 binding = "DB"
-database_name = "xxx"
-database_id = "xxx"
+database_name = "email-tmp"
+database_id = "3bec1d49-a8ba-4e6a-82a3-83a64d79a1b9"
 
 # kv config for send email verification code
 # [[kv_namespaces]]
